@@ -1,0 +1,33 @@
+{
+    "game": {
+        "player_nums": 6,
+        "language": "english",
+        "mode": "watch",
+        "game_count": 1,
+        "start_game_idx": 0,
+        "exp_name": "demo",
+        "camp": null,
+        "output_dir": "logs/avalon/battle",
+        "enable_intent_identification": true
+    },
+    "default_model": {
+        "model_name": "gemini-3-flash-preview",
+        "api_key": null,
+        "api_base": null
+    },
+    "players": [
+        {"name": "player 1", "role": null, "agent_type": "direct", "model": null},
+        {"name": "player 2", "role": null, "agent_type": "direct", "model": null},
+        {"name": "player 3", "role": null, "agent_type": "direct", "model": null},
+        {"name": "player 4", "role": null, "agent_type": "direct", "model": null},
+        {"name": "player 5", "role": null, "agent_type": "direct", "model": null},
+        {"name": "player 6", "role": null, "agent_type": "direct", "model": null}
+    ],
+    "roles": ["Merlin", "Percival", "Loyal Servant", "Loyal Servant", "Morgana", "Assassin"],
+    "extractors": {
+        "model_name": null,
+        "api_key": null,
+        "api_base": null,
+        "temperature": 0
+    }
+}
