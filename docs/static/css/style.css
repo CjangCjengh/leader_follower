@@ -1,0 +1,533 @@
+/* ============================================
+   The Stackelberg Speaker - GitHub Pages Style
+   ============================================ */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #dbeafe;
+    --accent: #7c3aed;
+    --bg: #ffffff;
+    --bg-alt: #f8fafc;
+    --text: #1e293b;
+    --text-secondary: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ---- Hero ---- */
+.hero {
+    position: relative;
+    padding: 6rem 0 4rem;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    color: #fff;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.35rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.35);
+    color: #a5b4fc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #c7d2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero-authors {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-links {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* ---- Sections ---- */
+.section {
+    padding: 4.5rem 0;
+}
+
+.section-alt {
+    background: var(--bg-alt);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--text);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+}
+
+.subsection-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 3rem 0 1rem;
+    color: var(--text);
+}
+
+.subsection-title:first-of-type {
+    margin-top: 0;
+}
+
+/* ---- Abstract ---- */
+.abstract-text {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+}
+
+.abstract-text p + p {
+    margin-top: 1rem;
+}
+
+.abstract-text strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ---- Figures ---- */
+.figure-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.figure-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.figure-caption {
+    margin-top: 1rem;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.figure-caption strong {
+    color: var(--text);
+}
+
+/* ---- Method Steps ---- */
+.method-intro {
+    max-width: 850px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.85;
+}
+
+.method-intro strong {
+    color: var(--text);
+}
+
+.method-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.step-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.step-card p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ---- Game Grid ---- */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.game-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.game-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.game-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.game-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+}
+
+.game-tag {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* ---- Tables ---- */
+.results-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    max-width: 850px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.results-table th,
+.results-table td {
+    padding: 0.7rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.results-table th {
+    background: #f1f5f9;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+}
+
+.results-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.results-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.results-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.highlight-row {
+    background: rgba(37, 99, 235, 0.04) !important;
+}
+
+.highlight-row td {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.results-table-compact {
+    max-width: 700px;
+}
+
+/* ---- Analysis Grid ---- */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.analysis-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.analysis-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+}
+
+/* ---- Citation ---- */
+.citation-block {
+    position: relative;
+    background: #1e293b;
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    max-width: 750px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.citation-block pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+    margin: 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #94a3b8;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ---- Footer ---- */
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .method-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
