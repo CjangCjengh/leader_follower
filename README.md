@@ -1,6 +1,11 @@
 
 # The Stackelberg Speaker
 
+[![Paper](https://img.shields.io/badge/Paper-ACL%202026-red)](https://openreview.net/forum?id=mqzGJF0nc3)
+[![Project Page](https://img.shields.io/badge/Project%20Page-GitHub%20Pages-blue)](https://cjangcjengh.github.io/leader_follower/)
+[![Data](https://img.shields.io/badge/Data-HuggingFace-yellow)](https://huggingface.co/datasets/CjangCjengh/sdg_dataset)
+[![Models](https://img.shields.io/badge/Models-HuggingFace-green)](https://huggingface.co/CjangCjengh/sdg_ckpt)
+
 This is the official implementation of the ACL 2026 Main paper: *The Stackelberg Speaker: Optimizing Persuasive Communication in Social Deduction Games*.
 
 ## Supported Games
@@ -14,8 +19,8 @@ This is the official implementation of the ACL 2026 Main paper: *The Stackelberg
 
 ## TODO
 
-- [x] Release code
-- [ ] Release data
+- ✅ Release code
+- ✅ Release data
 - [ ] Release checkpoints
 
 ## Citation
