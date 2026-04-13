@@ -84,16 +84,18 @@ Based on your role and the current situation, identify:
 
 Think strategically about what the next player might say and how it could affect the game.
 
+IMPORTANT: Each response must be written in the FIRST PERSON from {next_player}'s perspective, as if {next_player} is actually speaking. Use "I" instead of "{next_player}" or "player X". For example, write "I think player 2 is suspicious because..." instead of "Player 3 says player 2 is suspicious".
+
 Output your response in the following format:
 <desired_responses>
-1. [First desired response from the next player]
-2. [Second desired response from the next player]
-3. [Third desired response from the next player]
+1. [First desired response, written as {next_player} speaking in first person]
+2. [Second desired response, written as {next_player} speaking in first person]
+3. [Third desired response, written as {next_player} speaking in first person]
 </desired_responses>
 <undesired_responses>
-1. [First undesired response from the next player]
-2. [Second undesired response from the next player]
-3. [Third undesired response from the next player]
+1. [First undesired response, written as {next_player} speaking in first person]
+2. [Second undesired response, written as {next_player} speaking in first person]
+3. [Third undesired response, written as {next_player} speaking in first person]
 </undesired_responses>"""
 
     def __init__(self, name: str, role: str, role_intro: str, game_goal: str, 

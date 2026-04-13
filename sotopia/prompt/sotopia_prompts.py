@@ -284,9 +284,7 @@ Provide a concise updated social memory summary."""
 # ============================================================
 # Refiner Prompt (for utterance refinement during training/inference)
 # ============================================================
-refine_prompt = """You are a communication expert specializing in persuasive dialogue refinement for social interactions.
-
-<context>
+refine_prompt = """<context>
 Game Rules: This is a social interaction scenario where two people are having a conversation. Each person has their own character profile, social goals, and secrets. The goal is to achieve your objectives through natural conversation.
 
 Your Character: {player_name} ({player_role})
@@ -347,10 +345,12 @@ Their character: {next_speaker_profile}
 
 Based on the conversation context and the current speaker's utterance, generate {k} possible responses that {next_speaker_name} would likely give. These should be {response_type} responses that {response_description}.
 
+IMPORTANT: Each response must be written in the FIRST PERSON from {next_speaker_name}'s perspective, as if {next_speaker_name} is actually speaking. Use "I" instead of "{next_speaker_name}" or their name. For example, write "I think we should discuss this further because..." instead of "{next_speaker_name} suggests discussing further".
+
 Generate exactly {k} responses, each on a new line, prefixed with a number:
-1. [response 1]
-2. [response 2]
-3. [response 3]"""
+1. [response 1, written in first person as {next_speaker_name} speaking]
+2. [response 2, written in first person as {next_speaker_name} speaking]
+3. [response 3, written in first person as {next_speaker_name} speaking]"""
 
 # ============================================================
 # Base Utterance Prompt (for generating base utterances during data collection)

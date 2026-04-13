@@ -291,14 +291,16 @@ Consider:
 
 2. What response would be most harmful to your objectives?
 
+IMPORTANT: Write each response in the FIRST PERSON from {next_player_name}'s perspective, as if {next_player_name} is actually speaking. Use "I" instead of "{next_player_name}" or "player X". For example, write "I believe we should include player 2 on this quest because..." instead of "Player 3 suggests including player 2".
+
 Provide your analysis in the following format:
 
 ```
 Strategic Analysis: [Your reasoning about the current situation and what you need to achieve]
 
-Desired Response: [The specific response you want from the next player]
+Desired Response: [The specific response you want from the next player, written in first person as if they are speaking]
 
-Undesired Response: [The specific response you want to avoid from the next player]
+Undesired Response: [The specific response you want to avoid from the next player, written in first person as if they are speaking]
 ```"""
 
 
@@ -341,9 +343,7 @@ Response: [Your response]
 # Refine Prompt
 # Used by the Refiner model to refine u_base into a more persuasive version.
 refine_prompt = \
-    """You are a communication expert specializing in persuasive dialogue refinement for social deduction games.
-
-{game_rules}
+    """{game_rules}
 
 Your are {player_name} and your role is {player_role}.
 

@@ -27,17 +27,27 @@ def build_refiner_prompt(
     game_state: str,
     dialog_history: str,
     base_utterance: str,
-) -> str:
+) -> List[Dict[str, str]]:
     """
     Build the Refiner's input prompt (consistent with RefinerWrapper._refine_utterance at inference).
+
+    Returns:
+        Messages list in the Refiner's prompt format.
     """
-    return refine_prompt.format(
+    refine_input = refine_prompt.format(
         player_name=player_name,
         player_role=player_role,
         game_state=game_state,
         dialog_history=dialog_history,
         base_utterance=base_utterance,
     )
+
+    messages = [
+        {"role": "system", "content": "You are a communication expert specializing in persuasive dialogue refinement for social interactions."},
+        {"role": "user", "content": refine_input}
+    ]
+
+    return messages
 
 
 def build_measurer_prompt(
