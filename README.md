@@ -22,12 +22,23 @@ This is the official implementation of the ACL 2026 Main paper: *The Stackelberg
 If you find this work useful, please cite:
 
 ```bibtex
-@inproceedings{
-    zheng2026thestackelbergspeaker,
-    title={The Stackelberg Speaker: Optimizing Persuasive Communication in Social Deduction Games},
-    author={Zhang Zheng and Deheng Ye and Peilin Zhao and Hao Wang},
-    booktitle={The 64th Annual Meeting of the Association for Computational Linguistics},
-    year={2026},
-    url={https://openreview.net/forum?id=mqzGJF0nc3}
+@inproceedings{zheng-etal-2026-stackelberg,
+    title = "The Stackelberg Speaker: Optimizing Persuasive Communication in Social Deduction Games",
+    author = "Zheng, Zhang  and
+      Ye, Deheng  and
+      Zhao, Peilin  and
+      Wang, Hao",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.250/",
+    pages = "5520--5544",
+    ISBN = "979-8-89176-390-6"
 }
 ```
